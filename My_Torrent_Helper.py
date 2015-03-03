@@ -8,6 +8,7 @@ from keith.file_mngr import My_Files
 save_path = '~/torrents/extracted'
 base_path = '~/torrents/completed'
 video_ext = ['.avi', '.mkv', '.mp4', '.m4v', '.mpeg']
+network_path = '/Volumes/Public/Shared Videos/TV Shows'
 
 # Initialize Needed Classes
 my_rar = My_Rar(base_path, save_path)
@@ -30,7 +31,7 @@ if not my_rar.rar_objs:
 
 # Print out what needs to be done
 print ""
-print "The following need to be extracted:"
+print "The following needs to be extracted:"
 for i in my_rar.rar_ext_names:
 	print i
 print ""
@@ -44,3 +45,18 @@ if not (answer.upper() == 'Y' or answer.upper() == 'YES'):
 
 # Extract ALL THE THINGS
 my_rar.extract_all()
+
+# Check for Network Path
+if not os.path.isdir(network_path):
+	print 'The Network Path %s is not currently available!' % network_path
+	sys.exit()
+
+# Get all of files from network drive
+
+# Filter all Network files for only video files
+
+# Determine which files need to be copied
+
+# Determine where to copy files
+
+# Copy Files

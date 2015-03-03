@@ -83,7 +83,7 @@ class My_Rar(object):
 		if not os.path.isdir(target_path):
 			raise NameError('Invalid Target Directory')
 		rar_to_extract.extractall(target_path)
-		print "%s was extracted to % s" % (rar_to_extract.filename, rar_to_extract.infolist()[0].filename)
+		print "%s was extracted to % s" % (os.path.split(rar_to_extract.filename)[1], rar_to_extract.infolist()[0].filename)
 		
 
 	def extract_all(self, extract_path=None):
