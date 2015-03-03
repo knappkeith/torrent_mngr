@@ -1,3 +1,4 @@
+#!/usr/local/bin/python
 from rar_handler import My_Rar
 import os
 import sys
