@@ -8,6 +8,7 @@ from keith.file_mngr import My_Files
 save_path = '~/torrents/extracted'
 base_path = '~/torrents/completed'
 video_ext = ['.avi', '.mkv', '.mp4', '.m4v', '.mpeg']
+# network_path = '/Volumes/Public/Shared Videos/TV Shows'
 network_path = '/Volumes/Public/Shared Videos/TV Shows'
 
 # Initialize Needed Classes
@@ -51,7 +52,14 @@ if not os.path.isdir(network_path):
 	print 'The Network Path %s is not currently available!' % network_path
 	sys.exit()
 
+# Ask to continue
+answer = raw_input('Would you like to start copying to the Network(Y/N)?:')
+if not (answer.upper() == 'Y' or answer.upper() == 'YES'):
+	print 'nevermind'
+	sys.exit()
+
 # Get all of files from network drive
+my_network = My_Files(network_path)
 
 # Filter all Network files for only video files
 
