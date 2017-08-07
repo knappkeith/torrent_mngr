@@ -1,2 +1,3 @@
 unrar
 guessit
+-e git+https://github.com/knappkeith/keith.git#egg=keith

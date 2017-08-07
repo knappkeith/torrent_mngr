@@ -1,6 +1,6 @@
 from unrar import rarfile
 import os
-from keith.file_mngr import My_Files
+from file_mngr import My_Files
 
 class My_Rar(object):
 

@@ -4,7 +4,7 @@
 
 import os
 from guessit import guess_file_info
-from keith.file_mngr import My_Files
+from file_mngr import My_Files
 import copy
 
 class TV_Shows(object):

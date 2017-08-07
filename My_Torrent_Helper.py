@@ -2,7 +2,7 @@
 from rar_handler import My_Rar
 import os
 import sys
-from keith.file_mngr import My_Files
+from file_mngr import My_Files
 from tv_shows import TV_Shows
 
 # Define Variables
